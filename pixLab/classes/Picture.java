@@ -162,7 +162,7 @@ public class Picture extends SimplePicture
                 
                 pixelObj.setRed(average);
                 pixelObj.setGreen(average);
-                pixelObj.setBlue(average);
+                pixelObj.setBlue(pixelObj.getBlue());
             }
         }
     }
