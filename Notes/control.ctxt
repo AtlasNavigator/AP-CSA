@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=control
+comment0.text=\r\n\ It's\ about\ control\ statements.\r\n\r\n\ @author\ Jose\ Prieto\r\n\r\n\ @version\ 08302022\r\n
+comment1.params=percentage
+comment1.target=java.lang.String\ grade(int)
+comment2.params=
+comment2.target=void\ gradeThis()
+comment3.params=args
+comment3.target=void\ main(java.lang.String[])
+numComments=4
