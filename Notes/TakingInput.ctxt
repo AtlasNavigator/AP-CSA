@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=TakingInput
+comment0.text=\r\n\ Have\ the\ computer\ say\ hello\ (name)\r\n\ Ask\ for\ their\ favorite\ game\r\n\ Have\ the\ computer\ tell\ them\ their\ favorite\ game\ sucks\r\n\ and\ insult\ the\ user\r\n\ @author\ Jose\ Prieto\r\n\ @version\ 8/25/2022\r\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=
+comment2.target=void\ aMethod()
+comment3.params=
+comment3.target=void\ runThis()
+comment4.params=
+comment4.target=int\ methodB()
+comment5.params=
+comment5.target=java.lang.String\ getName()
+comment5.text=\r\n\ Asks\ for\ a\ user's\ name\r\n\ \r\n\ @return\ the\ User's\ name\r\n
+comment6.params=
+comment6.target=int\ getAge()
+comment7.params=
+comment7.target=void\ addStuff()
+numComments=8

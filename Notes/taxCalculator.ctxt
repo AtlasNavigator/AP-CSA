@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=taxCalculator
+comment0.text=\r\n\ This\ is\ a\ tax\ calculator.\ We\ assume\ a\ flat\ tax\ rate\ of\ 20%.\r\n\ There\ is\ a\ $10,000\ standard\ deduction.\r\n\ There\ is\ a\ $2,000\ deduction\ per\ dependant.\r\n\ Gross\ income\ should\ be\ entered\ to\ the\ nearest\ penny.\r\n\ The\ total\ amount\ is\ printed\ in\ decimal\ form.\r\n\ \r\n\ @author\ Jose\ Prieto\r\n\ @version\ 1.0\r\n
+comment1.params=
+comment1.target=float\ taxes()
+numComments=2
