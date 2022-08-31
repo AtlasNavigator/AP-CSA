@@ -46,4 +46,14 @@ public class control
             // i++ //You don't need to put the iterator inside, not recommended.
         }
     }
+    public static void loops(){
+        int i = 0;
+        while (i < 10){
+            System.out.println(i);
+            i++; //Increase i by 1, keeps going until i = 10
+        }
+        while (true){
+            System.out.println(i);
+        }
+    }
 }
