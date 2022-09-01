@@ -43,15 +43,6 @@ public class Notes
     * -Commenting
     * -Documentation
     */
-   public static void method3(){
-       Practice2.testMethod2();
-    }
-   
-    public static void method4(){
-        Practice2.testMethod2();
-        System.out.println();
-        Practice2.testMethod2();
-    }
     
     public static void method5(String name){
         System.out.println("Hello" + name + ".");
