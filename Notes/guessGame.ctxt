@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=guessGame
+comment0.text=\r\n\ It\ is\ a\ number\ guessing\ game,\ something\ simple\ and\ basic.\r\n\r\n\ @author\ Jose\ Prieto\r\n\ @version\ 09062022\r\n
+comment1.params=
+comment1.target=void\ inputs()
+comment2.params=
+comment2.target=int\ generator()
+numComments=3
