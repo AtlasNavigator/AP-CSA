@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.target=FountainPen
+comment0.text=\r\n\ Something\ something\ class\ constructor\r\n\r\n\ @author\ Jose\ Prieto\r\n\ @version\ 09092022\r\n
+comment1.params=material\ nibType\ inkStorage\ inkColor\ nibSize\ inkCapacity\ inkLevel
+comment1.target=FountainPen(java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ double,\ double,\ double)
+comment1.text=\r\n\ Constructor\ for\ fountainPen\r\n
+comment2.params=
+comment2.target=FountainPen()
+comment3.params=
+comment3.target=double\ getInkLevel()
+comment4.params=
+comment4.target=double\ getInkCapacity()
+comment5.params=
+comment5.target=double\ getNibSize()
+comment6.params=
+comment6.target=java.lang.String\ getInkColor()
+comment7.params=
+comment7.target=java.lang.String\ getInkStorage()
+comment8.params=
+comment8.target=java.lang.String\ getNibType()
+comment9.params=
+comment9.target=java.lang.String\ getMaterial()
+numComments=10
