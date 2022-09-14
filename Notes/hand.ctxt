@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=hand
+comment0.text=\r\n\ A\ basic\ game\ of\ Blackjack,\ this\ is\ dealing\ with\ the\ cards.\r\n\r\n\ @author\ Jose\ Prieto\r\n\ @version\ 09122022\r\n
+comment1.params=
+comment1.target=int\ getTotal()
+comment2.params=
+comment2.target=hand()
+comment3.params=
+comment3.target=int\ cardGen()
+comment4.params=
+comment4.target=void\ hit()
+comment5.params=
+comment5.target=boolean\ bustCheck()
+numComments=6
