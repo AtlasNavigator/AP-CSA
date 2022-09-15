@@ -16,31 +16,32 @@ public class hand
     public int getTotal(){
         return total;
     }
-
+    
+    public int card1Value(){
+        return card1; //Reveals card1 value
+    }
+    
+    public int card2Value(){
+        return card2; //Accessor for card2
+    }
+    
     public hand(){
-        card1 = cardGen();
-        card2 = cardGen();
+        card1 = hit();
+        card2 = hit();
     }
 
-    public int cardGen(){
+    public int hit(){ //Hit me
         int card = (int)(Math.random() * 9 + 2); //Generate an int [1, 11]
         total += card;
         return card;
-    }
-
-    public void hit(){
-        cardGen();
     }
 
     public boolean bustCheck(){ //Checks if total is bust
         if (total > 21){
             System.out.println("You have bust. Game over, you got " + getTotal() + ".");
             return true;
-        // } else if (total == 21){
-            // System.out.println("Congratulations, you won! You got 21.");
-            // return true;
-        // } else 
-
-            // return false;
+        } else {
+            return false;
+        }
     }
 }

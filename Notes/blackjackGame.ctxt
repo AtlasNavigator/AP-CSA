@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=blackjackGame
+comment0.text=\r\n\ This\ is\ the\ blackjack\ game.\r\n\r\n\ @author\ Jose\ Prieto\r\n\ @version\ 09152022\r\n
+comment1.params=total
+comment1.target=boolean\ winCheck(int)
+comment2.params=
+comment2.target=void\ game()
+numComments=3
