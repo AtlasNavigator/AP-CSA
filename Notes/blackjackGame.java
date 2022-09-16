@@ -61,8 +61,8 @@ public class blackjackGame
                 player.hit(); //Executes the hit command
                 
                 if (winCheck(player.getTotal())){
-                    
-                }
+                    break;
+                } 
             }
         }
     }
