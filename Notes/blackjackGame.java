@@ -59,10 +59,87 @@ public class blackjackGame
 
             if (response == 1){
                 player.hit(); //Executes the hit command
-                
+
                 if (winCheck(player.getTotal())){
                     break;
+                } else if (player.bustCheck()){
+                    break;
+                } else {
+                    System.out.println("Your total currently is: " + player.getTotal());
+                    if (dealer.getTotal() < 17){
+                        System.out.println("");
+                        System.out.println("The dealer will hit.");
+                        System.out.println("");
+                        dealer.hit();
+                        //If dealer total < 17, hit
+                        if (player.getTotal() > dealer.getTotal()){
+                            System.out.println("Congrats, you won!");
+                            System.out.println("Here are the numbers:");
+                            System.out.println("Player: " + player.getTotal());
+                            System.out.println("Dealer: " + dealer.getTotal());
+                            break;
+                        } else {
+                            System.out.println("The house wins.");
+                            System.out.println("Here are the numbers:");
+                            System.out.println("Player: " + player.getTotal());
+                            System.out.println("Dealer: " + dealer.getTotal());
+                            break;
+                        }                       
+                    } else {
+                        System.out.println("The dealer will stand.");
+                        System.out.println("");
+                        
+                        if (player.getTotal() > dealer.getTotal()){
+                            System.out.println("Congrats, you won!");
+                            System.out.println("Here are the numbers:");
+                            System.out.println("Player: " + player.getTotal());
+                            System.out.println("Dealer: " + dealer.getTotal());
+                            break;
+                        } else {
+                            System.out.println("The house wins.");
+                            System.out.println("Here are the numbers:");
+                            System.out.println("Player: " + player.getTotal());
+                            System.out.println("Dealer: " + dealer.getTotal());
+                            break;
+                        }   
+                    }
                 } 
+            } else if (response == 2){
+                if (dealer.getTotal() < 17){
+                    System.out.println("The dealer will hit.");
+                    System.out.println("");
+                    dealer.hit();
+                    if (player.getTotal() > dealer.getTotal()){
+                            System.out.println("Congrats, you won!");
+                            System.out.println("Here are the numbers:");
+                            System.out.println("Player: " + player.getTotal());
+                            System.out.println("Dealer: " + dealer.getTotal());
+                            break;
+                        } else {
+                            System.out.println("The house wins.");
+                            System.out.println("Here are the numbers:");
+                            System.out.println("Player: " + player.getTotal());
+                            System.out.println("Dealer: " + dealer.getTotal());
+                            break;
+                        }   
+                }  else {
+                    System.out.println("The dealer will stand.");
+                    System.out.println("");
+                    
+                    if (player.getTotal() > dealer.getTotal()){
+                            System.out.println("Congrats, you won!");
+                            System.out.println("Here are the numbers:");
+                            System.out.println("Player: " + player.getTotal());
+                            System.out.println("Dealer: " + dealer.getTotal());
+                            break;
+                        } else {
+                            System.out.println("The house wins.");
+                            System.out.println("Here are the numbers:");
+                            System.out.println("Player: " + player.getTotal());
+                            System.out.println("Dealer: " + dealer.getTotal());
+                            break;
+                        }   
+                }
             }
         }
     }
