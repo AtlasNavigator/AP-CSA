@@ -38,7 +38,7 @@ public class hand
 
     public boolean bustCheck(){ //Checks if total is bust
         if (total > 21){
-            System.out.println("You have bust. Game over, you got " + getTotal() + ".");
+            System.out.println("Game over, bust at " + getTotal() + ".");
             return true;
         } else {
             return false;
