@@ -6,6 +6,7 @@
  * </li></ul> 
  *    
  * @author Laurie White
+ * @author Jose Prieto
  * @version April 2012
  */
 public class Magpie3

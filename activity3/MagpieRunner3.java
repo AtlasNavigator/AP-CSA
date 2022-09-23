@@ -3,6 +3,7 @@ import java.util.Scanner;
 /**
  * A simple class to run the Magpie class.
  * @author Laurie White
+ * @author Jose Prieto
  * @version April 2012
  */
 public class MagpieRunner3
