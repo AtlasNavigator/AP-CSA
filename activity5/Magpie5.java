@@ -10,6 +10,7 @@ import java.util.Random;
  *</li></ul>
  * This version uses an array to hold the default responses.
  * @author Laurie White
+ * @author Jose Prieto
  * @version April 2012
  */
 public class Magpie5
@@ -284,7 +285,11 @@ public class Magpie5
 	private String [] randomResponses = {"Interesting, tell me more",
 			"Hmmm.",
 			"Do you really think so?",
-			"You don't say."
+			"You don't say.",
+			"I'd like to hear more",
+			"Cool.",
+			"That's interesting.",
+			"Interesting, I'd like to hear more."
 	};
 	
 }
