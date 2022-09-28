@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=codeWordChecker
+comment0.text=\r\n\ Prompt\:\ \r\n\ Write\ to\ complete\ CodeWordChecker\ class.\ Your\ implementation\r\n\ must\ meet\ all\ specifications\ and\ conform\ to\ all\ examples.\r\n\r\n\ From\ the\ 2018\ AP\ CSA\ FRQ\ \#3\r\n\ @author\ Jose\ Prieto\r\n\ @version\ 09/28/2022\r\n
+comment1.params=min\ max\ str
+comment1.target=codeWordChecker(int,\ int,\ java.lang.String)
+comment2.params=str
+comment2.target=codeWordChecker(java.lang.String)
+numComments=3
