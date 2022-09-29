@@ -1,4 +1,4 @@
-
+import java.util.Scanner;
 /**
  * Prompt: 
  * Write to complete CodeWordChecker class. Your implementation
@@ -32,6 +32,10 @@ public class codeWordChecker
     }
     
     public boolean isValid(String str){
-        if (min > 6 && max < 20
+        if (min > 6 && max < 20 && !str.equals("$")){
+            return true;
+        } else {
+            return false;
+        }
     }
 }

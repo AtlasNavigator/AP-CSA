@@ -5,4 +5,6 @@ comment1.params=min\ max\ str
 comment1.target=codeWordChecker(int,\ int,\ java.lang.String)
 comment2.params=str
 comment2.target=codeWordChecker(java.lang.String)
-numComments=3
+comment3.params=str
+comment3.target=boolean\ isValid(java.lang.String)
+numComments=4
