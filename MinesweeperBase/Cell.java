@@ -1,8 +1,9 @@
 
 /**
- * Write a description of class Cell here.
+ * This is in charge of cells
  * 
- * @author Wiebe 
+ * @author Kyle Wiebe 
+ * @author Jose Prieto
  * @version 10.11.16
  */
 import javax.swing.*;

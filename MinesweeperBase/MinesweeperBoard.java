@@ -1,9 +1,9 @@
 
 /**
- * Write a description of class Minesweeper here.
+ * This is the graphical part of minesweeper.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Jose Prieto
+ * @version 10/04/2022
  */
 import java.lang.Math;
 import javax.swing.*;
