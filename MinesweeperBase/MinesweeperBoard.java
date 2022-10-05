@@ -3,7 +3,7 @@
  * This is the graphical part of minesweeper.
  * 
  * @author Jose Prieto
- * @version 10/04/2022
+ * @version 10/05/2022
  */
 import java.lang.Math;
 import javax.swing.*;
@@ -16,7 +16,9 @@ public class MinesweeperBoard{
     int columns;
     public MinesweeperBoard(int row, int col){
         //Put the constructor here.
-        
+        this.rows = row;
+        this.columns = col;
+        this.board = new Cell[row * col]; //Board size is row * col
         
         //These pieces are for the GUI.
         JFrame frame = new JFrame();
@@ -41,7 +43,7 @@ public class MinesweeperBoard{
      *  It is still required for all students.
      */
     public void printBoard(){
-        
+        System.out.println(board);
     }
     public JPanel addCells(){
         JPanel panel = new JPanel(new GridLayout(rows,columns));

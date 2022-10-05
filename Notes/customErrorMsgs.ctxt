@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=customErrorMsgs
+comment0.text=\r\n\ We\ learn\ how\ to\ make\ custom\ error\ messages\ for\ diagnostic\ purposes.\r\n\r\n\ @author\ Jose\ Prieto\r\n\ @author\ Kyle\ Wiebe\r\n\ @version\ 10/05/2022\r\n
+comment1.params=
+comment1.target=void\ test()
+comment2.params=a
+comment2.target=void\ test2(int)
+comment3.params=
+comment3.target=void\ test3()
+numComments=4
