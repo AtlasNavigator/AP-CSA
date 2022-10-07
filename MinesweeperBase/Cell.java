@@ -27,15 +27,21 @@ public class Cell implements ActionListener{
         button.setMargin(new Insets(0,0,0,0)); //No margins
         value = 0; //Everything defaults to 0 first
     }
+    
     /** This Method tells me if the cell is a mine.
      * 
      * @return True if it is a mine, otherwse false.
      */
     boolean isMine(){
-        return this.value == 9; //If mine, return a value of 0
+        return this.value == 9; //isMine is true if cell has value of 9
     }
         
     //Additional Methods may be required. Please make them yourself.
+    
+    public int cellAccessor(){
+        return value;
+    }
+    
     public void makeMine(){
         /*
          * Designates a cell as a mine

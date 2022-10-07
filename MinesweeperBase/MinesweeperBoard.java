@@ -27,26 +27,32 @@ public class MinesweeperBoard{
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setVisible(true);
     }
-
+    
     public MinesweeperBoard(){
         this(10,10); //Default settings; 10x10 board
     }
 
     public void addMines(int mines) throws Exception{
         //Spit error/game over when you click on a mine
-        //Write array with random indexes
-        
-        
+        //Write random number gen that modifies random indecies (cells)
+        int i = mines;
+
+        while (i > 0){
+            int minePlace = (int)(Math.random() * 100 + 1);
+            System.out.println(minePlace);
+            i--;
+        }
+
     }
 
     public void addNums(){
-        
+
     }
-    
+
     public static void boardArray(){
-        
+
     }
-    
+
     /**
      *  This method is used for testing and will be deleted if using the GUI.
      *  It is still required for all students.
