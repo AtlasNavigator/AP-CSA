@@ -65,7 +65,7 @@ public class FountainPen
     }
 
     //Mutator Methods
-
+    
     public void setInkLevel(double newLevel){
         inkLevel = newLevel;
     }

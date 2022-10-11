@@ -1,5 +1,5 @@
 /**
- * This is in charge of cells
+ * This is in charge of cells in the minesweeper game.
  * 
  * @author Kyle Wiebe 
  * @author Jose Prieto
@@ -37,6 +37,13 @@ public class Cell implements ActionListener{
     }
         
     //Additional Methods may be required. Please make them yourself.
+    
+    public void mineMutator(){
+        //Mutator method to set a cell as a mine using the 
+        //random number generator
+        
+        this.value = 9;
+    }
     
     public int cellAccessor(){
         return value;

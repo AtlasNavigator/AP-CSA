@@ -13,13 +13,19 @@ public class MinesweeperBoard{
     Cell[] board;
     int rows;
     int columns;
-    public MinesweeperBoard(int row, int col){
+    int mines;
+    public MinesweeperBoard(int row, int col, int mines){
         //Put the constructor here.
         this.rows = row;
         this.columns = col;
+        this.mines = mines;
         this.board = new Cell[row * col]; //Board size is row * col
-
-        //These pieces are for the GUI.
+        
+        try{
+            addMines(mines);
+        } catch (Exception e){} //Come back to this tomorrow
+        
+        //These pieces are for the GUI, written by Mr.Wiebe
         JFrame frame = new JFrame();
         frame.add(addCells());
 
@@ -29,17 +35,18 @@ public class MinesweeperBoard{
     }
     
     public MinesweeperBoard(){
-        this(10,10); //Default settings; 10x10 board
+        this(10,10,10); //Default settings; 10x10 board, 10 mines
     }
 
     public void addMines(int mines) throws Exception{
         //Spit error/game over when you click on a mine
         //Write random number gen that modifies random indecies (cells)
         int i = mines;
-
+        
         while (i > 0){
-            int minePlace = (int)(Math.random() * 100 + 1);
+            int minePlace = (int)(Math.random() * (rows * columns - 1));
             System.out.println(minePlace);
+            board[minePlace].mineMutator(); //Calls mutator in cell class to make mine
             i--;
         }
 
