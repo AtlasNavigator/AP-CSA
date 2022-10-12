@@ -38,13 +38,6 @@ public class Cell implements ActionListener{
         
     //Additional Methods may be required. Please make them yourself.
     
-    public void mineMutator(){
-        //Mutator method to set a cell as a mine using the 
-        //random number generator
-        
-        this.value = 9;
-    }
-    
     public int cellAccessor(){
         return value;
     }
@@ -52,6 +45,7 @@ public class Cell implements ActionListener{
     public void makeMine(){
         /*
          * Designates a cell as a mine
+         * TL;DR makes mines
          */
         value = 9;
     }
@@ -60,6 +54,7 @@ public class Cell implements ActionListener{
         button.setEnabled(false); //Makes clicked button unclickable
         displayValue();
     }
+    
     public void displayValue(){
         /*
          * Shows numbers and colors if it is a mine

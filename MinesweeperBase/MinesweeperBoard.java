@@ -20,11 +20,15 @@ public class MinesweeperBoard{
         this.columns = col;
         this.mines = mines;
         this.board = new Cell[row * col]; //Board size is row * col
-        
+
+        System.out.println(mines);
+        System.out.println("");
+
         try{
+            System.out.println(mines);
             addMines(mines);
         } catch (Exception e){} //Come back to this tomorrow
-        
+
         //These pieces are for the GUI, written by Mr.Wiebe
         JFrame frame = new JFrame();
         frame.add(addCells());
@@ -33,7 +37,7 @@ public class MinesweeperBoard{
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setVisible(true);
     }
-    
+
     public MinesweeperBoard(){
         this(10,10,10); //Default settings; 10x10 board, 10 mines
     }
@@ -42,21 +46,21 @@ public class MinesweeperBoard{
         //Spit error/game over when you click on a mine
         //Write random number gen that modifies random indecies (cells)
         int i = mines;
-        
+
         while (i > 0){
             int minePlace = (int)(Math.random() * (rows * columns - 1));
             System.out.println(minePlace);
-            board[minePlace].mineMutator(); //Calls mutator in cell class to make mine
+            System.out.println(i);
+            board[minePlace].makeMine(); //Calls mutator in cell class to make mine
+            board[minePlace].checkCell();
             i--;
+            System.out.println();
+            System.out.println(i > 0);
         }
 
     }
 
     public void addNums(){
-
-    }
-
-    public static void boardArray(){
 
     }
 
@@ -66,6 +70,12 @@ public class MinesweeperBoard{
      */
     public void printBoard(){
         System.out.println(board);
+        for(int i = 0; i < rows; i++){
+            System.out.println("[" + i + "]"); //Prints [i]
+            for (int j = 0; j < columns; j++){
+                System.out.print("[" + j + "]");
+            }
+        }
     }
 
     public JPanel addCells(){
