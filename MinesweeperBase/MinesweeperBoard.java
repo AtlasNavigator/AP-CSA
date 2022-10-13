@@ -21,13 +21,8 @@ public class MinesweeperBoard{
         this.mines = mines;
         this.board = new Cell[row * col]; //Board size is row * col
 
-        System.out.println(mines);
+        System.out.println(mines); //Making sure why addMines isnt working
         System.out.println("");
-
-        try{
-            System.out.println(mines);
-            addMines(mines);
-        } catch (Exception e){} //Come back to this tomorrow
 
         //These pieces are for the GUI, written by Mr.Wiebe
         JFrame frame = new JFrame();
@@ -36,6 +31,11 @@ public class MinesweeperBoard{
         frame.pack();
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setVisible(true);
+        // Add the mines, in the correct order
+        try{
+            System.out.println(mines);
+            addMines(mines); //Working as of 10/13
+        } catch (Exception e){} 
     }
 
     public MinesweeperBoard(){
@@ -46,22 +46,33 @@ public class MinesweeperBoard{
         //Spit error/game over when you click on a mine
         //Write random number gen that modifies random indecies (cells)
         int i = mines;
-
-        while (i > 0){
-            int minePlace = (int)(Math.random() * (rows * columns - 1));
-            System.out.println(minePlace);
-            System.out.println(i);
-            board[minePlace].makeMine(); //Calls mutator in cell class to make mine
-            board[minePlace].checkCell();
-            i--;
-            System.out.println();
-            System.out.println(i > 0);
+        System.out.println("i is defined as: " + i);
+        if (i < 0){
+            //Make sure i isn't negative
+            throw new Exception ("Something is wonky, i is :" + i);
+        } else if (i >= rows * columns) {
+            //Make sure mine amount doesn't exceed amount of cells
+            throw new Exception ("Too many mines. At least one free cell is required");
+        } else{
+            while (i > 0){
+                System.out.println("i is defined as: " + i);
+                int minePlace = (int)(Math.random() * (rows * columns - 1));
+                System.out.println(minePlace);
+                System.out.println("i is defined as: " + i);
+                board[minePlace].makeMine(); //Calls mutator in cell class to make mine
+                System.out.println("i is defined as: " + i);
+                board[minePlace].checkCell();
+                System.out.println("i is defined as: " + i);
+                i--;
+                System.out.println("i is defined as: " + i);
+                System.out.println();
+                System.out.println(i > 0); //Come back to exceptions tomorrow
+            }
         }
-
     }
 
     public void addNums(){
-
+        // Adds numbers to cells surrounding mines
     }
 
     /**
@@ -71,9 +82,9 @@ public class MinesweeperBoard{
     public void printBoard(){
         System.out.println(board);
         for(int i = 0; i < rows; i++){
-            System.out.println("[" + i + "]"); //Prints [i]
+            System.out.println(); //Prints [i]
             for (int j = 0; j < columns; j++){
-                System.out.print("[" + j + "]");
+                System.out.print("[" + (j + i * columns) + "]");
             }
         }
     }
