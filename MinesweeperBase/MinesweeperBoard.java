@@ -46,33 +46,34 @@ public class MinesweeperBoard{
         //Spit error/game over when you click on a mine
         //Write random number gen that modifies random indecies (cells)
         int i = mines;
-        System.out.println("i is defined as: " + i);
         if (i < 0){
             //Make sure i isn't negative
+            System.out.println("Something is wonky, i is: " + i);
             throw new Exception ("Something is wonky, i is :" + i);
         } else if (i >= rows * columns) {
             //Make sure mine amount doesn't exceed amount of cells
+            System.out.println("Too many mines. At least one free cell is required.");
             throw new Exception ("Too many mines. At least one free cell is required");
         } else{
             while (i > 0){
-                System.out.println("i is defined as: " + i);
+                //Place mines at random indecies
                 int minePlace = (int)(Math.random() * (rows * columns - 1));
-                System.out.println(minePlace);
-                System.out.println("i is defined as: " + i);
-                board[minePlace].makeMine(); //Calls mutator in cell class to make mine
-                System.out.println("i is defined as: " + i);
-                board[minePlace].checkCell();
-                System.out.println("i is defined as: " + i);
-                i--;
-                System.out.println("i is defined as: " + i);
-                System.out.println();
-                System.out.println(i > 0); //Come back to exceptions tomorrow
+                // System.out.println(minePlace);
+                if (board[minePlace].cellAccessor() == 9){
+                    continue; //Prevent repeated minePlace spots
+                } else {
+                    board[minePlace].makeMine(); //Calls mutator in cell class to make mine
+                    i--;
+                    System.out.println();
+                    System.out.println(i > 0);
+                }
             }
         }
     }
 
     public void addNums(){
         // Adds numbers to cells surrounding mines
+        //Begin to do addNums 10/17
     }
 
     /**

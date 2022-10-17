@@ -48,7 +48,7 @@ public class Cell implements ActionListener{
          * TL;DR makes mines
          */
         value = 9;
-        System.out.println("makeMine is running.");
+        // System.out.println("makeMine is running.");
     }
     //The following methods are used for the User Inferface. These methods are fully functional and do not need to be modified.
     public void checkCell(){
