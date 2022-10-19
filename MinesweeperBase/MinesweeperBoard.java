@@ -74,18 +74,43 @@ public class MinesweeperBoard{
     public void addNums(){
         // Adds numbers to cells surrounding mines
         //Begin to do addNums 10/17
-    }
 
+        for (int c = 0; c < rows * columns; c++){
+            boolean topExists = c - columns >= 0; //Does a top exist?
+            boolean bottomExists = c + columns < columns * rows; //Does bottom exist?
+            boolean rightExists = (c + 1) % columns != 0; //Does the right exist?
+            boolean leftExists = c % columns != 0; //Is there a cell to the left?
+            
+            if (board[c].isMine()){
+                continue; //Skip this if the cell is a mine
+            } 
+            
+            int count = 0; //Set a counter to count mines surrounding
+            
+            if (topExists && board[c - columns].isMine()){
+                //Condition if mine is on top
+                count++;
+            }
+        }
+
+    }
     /**
      *  This method is used for testing and will be deleted if using the GUI.
      *  It is still required for all students.
      */
     public void printBoard(){
+        // For test purposes
         System.out.println(board);
         for(int i = 0; i < rows; i++){
             System.out.println(); //Prints [i]
             for (int j = 0; j < columns; j++){
-                System.out.print("[" + (j + i * columns) + "]");
+                int index = j + i * columns;
+                if (board[index].isMine() == true){
+                    System.out.print("[X]"); //if there is a mine, print [X]
+                }else {
+                    // System.out.print("[" + (j + i * columns) + "]");
+                    System.out.print("[ ]");
+                }
             }
         }
     }
