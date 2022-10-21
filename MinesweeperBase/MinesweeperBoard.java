@@ -33,9 +33,11 @@ public class MinesweeperBoard{
         frame.setVisible(true);
         // Add the mines, in the correct order
         try{
-            System.out.println(mines);
+            // System.out.println(mines);
             addMines(mines); //Working as of 10/13
-        } catch (Exception e){} 
+        } catch (Exception e){}
+        
+        addNums(); //Adds numbers to cells surrounding mines
     }
 
     public MinesweeperBoard(){
@@ -80,20 +82,58 @@ public class MinesweeperBoard{
             boolean bottomExists = c + columns < columns * rows; //Does bottom exist?
             boolean rightExists = (c + 1) % columns != 0; //Does the right exist?
             boolean leftExists = c % columns != 0; //Is there a cell to the left?
-            
+
             if (board[c].isMine()){
                 continue; //Skip this if the cell is a mine
             } 
-            
+
             int count = 0; //Set a counter to count mines surrounding
-            
+
             if (topExists && board[c - columns].isMine()){
                 //Condition if mine is on top
                 count++;
             }
+
+            if (bottomExists && board[c + columns].isMine()){
+                //If mine on bottom
+                count++;
+            }
+
+            if (rightExists && board[c + 1].isMine()){
+                //If mine to the right
+                count++;
+            }
+
+            if (leftExists && board[c - 1].isMine()){
+                //If mine to the left
+                count++;
+            }
+
+            if (topExists && leftExists && board[c - columns - 1].isMine()){
+                //If mine to the top left
+                count++;
+            }
+
+            if (topExists && rightExists && board[c - columns + 1].isMine()){
+                //If mine to the top right
+                count++;
+            }
+
+            if (bottomExists && leftExists && board[c + columns - 1].isMine()){
+                //If mine to the bottom left
+                count++;
+            }
+
+            if (bottomExists && rightExists && board[c + columns + 1].isMine()){
+                //If mine to the bottom right
+                count++;
+            }
+
+            board[c].cellModifier(count);
         }
 
     }
+
     /**
      *  This method is used for testing and will be deleted if using the GUI.
      *  It is still required for all students.
@@ -107,9 +147,9 @@ public class MinesweeperBoard{
                 int index = j + i * columns;
                 if (board[index].isMine() == true){
                     System.out.print("[X]"); //if there is a mine, print [X]
-                }else {
+                } else {
                     // System.out.print("[" + (j + i * columns) + "]");
-                    System.out.print("[ ]");
+                    System.out.print("[" + board[index].cellAccessor() + "]");
                 }
             }
         }

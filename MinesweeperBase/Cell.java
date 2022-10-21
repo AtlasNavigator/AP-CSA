@@ -42,6 +42,10 @@ public class Cell implements ActionListener{
         return value;
     }
     
+    public void cellModifier(int count){
+        value = count;
+    }
+    
     public void makeMine(){
         /*
          * Designates a cell as a mine
