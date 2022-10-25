@@ -145,11 +145,11 @@ public class MinesweeperBoard{
             System.out.println(); //Prints [i]
             for (int j = 0; j < columns; j++){
                 int index = j + i * columns;
-                if (board[index][0].isMine() == true){
+                if (board[index][j].isMine() == true){
                     System.out.print("[X]"); //if there is a mine, print [X]
                 } else {
                     // System.out.print("[" + (j + i * columns) + "]");
-                    System.out.print("[" + board[index][0].cellAccessor() + "]");
+                    System.out.print("[" + board[index][j].cellAccessor() + "]");
                 }
             }
         }
