@@ -59,15 +59,17 @@ public class MinesweeperBoard{
         } else{
             while (i > 0){
                 //Place mines at random indecies
-                int minePlace = (int)(Math.random() * (rows * columns - 1));
+                // int minePlace = (int)(Math.random() * (rows * columns - 1));
+                int mineRow = (int)(Math.random() * rows - 1);
+                int minePlace = (int)(Math.random() * columns - 1);
                 // System.out.println(minePlace);
-                if (board[minePlace][0].cellAccessor() == 9){
+                if (board[mineRow][minePlace].cellAccessor() == 9){
                     continue; //Prevent repeated minePlace spots
                 } else {
-                    board[minePlace][0].makeMine(); //Calls mutator in cell class to make mine
+                    board[mineRow][minePlace].makeMine(); //Calls mutator in cell class to make mine
                     i--;
                     System.out.println();
-                    System.out.println(i > 0);
+                    System.out.println(i > 0); //Can this keep running?
                 }
             }
         }
