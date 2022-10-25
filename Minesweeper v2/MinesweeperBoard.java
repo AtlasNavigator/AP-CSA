@@ -61,10 +61,10 @@ public class MinesweeperBoard{
                 //Place mines at random indecies
                 int minePlace = (int)(Math.random() * (rows * columns - 1));
                 // System.out.println(minePlace);
-                if (board[minePlace].cellAccessor() == 9){
+                if (board[minePlace][0].cellAccessor() == 9){
                     continue; //Prevent repeated minePlace spots
                 } else {
-                    board[minePlace].makeMine(); //Calls mutator in cell class to make mine
+                    board[minePlace][0].makeMine(); //Calls mutator in cell class to make mine
                     i--;
                     System.out.println();
                     System.out.println(i > 0);
@@ -83,53 +83,53 @@ public class MinesweeperBoard{
             boolean rightExists = (c + 1) % columns != 0; //Does the right exist?
             boolean leftExists = c % columns != 0; //Is there a cell to the left?
 
-            if (board[c].isMine()){
+            if (board[c][0].isMine()){
                 continue; //Skip this if the cell is a mine
             } 
 
             int count = 0; //Set a counter to count mines surrounding
 
-            if (topExists && board[c - columns].isMine()){
+            if (topExists && board[c - columns][0].isMine()){
                 //Condition if mine is on top
                 count++;
             }
 
-            if (bottomExists && board[c + columns].isMine()){
+            if (bottomExists && board[c + columns][0].isMine()){
                 //If mine on bottom
                 count++;
             }
 
-            if (rightExists && board[c + 1].isMine()){
+            if (rightExists && board[c + 1][0].isMine()){
                 //If mine to the right
                 count++;
             }
 
-            if (leftExists && board[c - 1].isMine()){
+            if (leftExists && board[c - 1][0].isMine()){
                 //If mine to the left
                 count++;
             }
 
-            if (topExists && leftExists && board[c - columns - 1].isMine()){
+            if (topExists && leftExists && board[c - columns - 1][0].isMine()){
                 //If mine to the top left
                 count++;
             }
 
-            if (topExists && rightExists && board[c - columns + 1].isMine()){
+            if (topExists && rightExists && board[c - columns + 1][0].isMine()){
                 //If mine to the top right
                 count++;
             }
 
-            if (bottomExists && leftExists && board[c + columns - 1].isMine()){
+            if (bottomExists && leftExists && board[c + columns - 1][0].isMine()){
                 //If mine to the bottom left
                 count++;
             }
 
-            if (bottomExists && rightExists && board[c + columns + 1].isMine()){
+            if (bottomExists && rightExists && board[c + columns + 1][0].isMine()){
                 //If mine to the bottom right
                 count++;
             }
 
-            board[c].cellModifier(count);
+            board[c][0].cellModifier(count);
         }
 
     }
@@ -145,11 +145,11 @@ public class MinesweeperBoard{
             System.out.println(); //Prints [i]
             for (int j = 0; j < columns; j++){
                 int index = j + i * columns;
-                if (board[index].isMine() == true){
+                if (board[index][0].isMine() == true){
                     System.out.print("[X]"); //if there is a mine, print [X]
                 } else {
                     // System.out.print("[" + (j + i * columns) + "]");
-                    System.out.print("[" + board[index].cellAccessor() + "]");
+                    System.out.print("[" + board[index][0].cellAccessor() + "]");
                 }
             }
         }
@@ -158,8 +158,8 @@ public class MinesweeperBoard{
     public JPanel addCells(){
         JPanel panel = new JPanel(new GridLayout(rows,columns));
         for(int i = 0; i< rows*columns; i++){
-            board[i]= new Cell();
-            panel.add(board[i].getButton());
+            board[i][0]= new Cell();
+            panel.add(board[i][0].getButton());
         }
         return panel;
     }
