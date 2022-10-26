@@ -36,7 +36,7 @@ public class MinesweeperBoard{
             // System.out.println(mines);
             addMines(mines); //Working as of 10/13
         } catch (Exception e){}
-        
+
         addNums(); //Adds numbers to cells surrounding mines
     }
 
@@ -78,62 +78,66 @@ public class MinesweeperBoard{
     public void addNums(){
         // Adds numbers to cells surrounding mines
         //Begin to do addNums 10/17
+        
+        int rowTracker = 0;
+        
+        for (Cell[] row : board){
+            for (int c = 0; c < rows; c++){
+                boolean topExists = rowTracker != 0;; //Does a top exist?
+                boolean bottomExists = rowTracker != rows - 1; //Does bottom exist?
+                boolean rightExists = c != columns - 1; //Does the right exist?
+                boolean leftExists = c != 0; //Is there a cell to the left?
 
-        for (int c = 0; c < rows * columns; c++){
-            boolean topExists = c - columns >= 0; //Does a top exist?
-            boolean bottomExists = c + columns < columns * rows; //Does bottom exist?
-            boolean rightExists = (c + 1) % columns != 0; //Does the right exist?
-            boolean leftExists = c % columns != 0; //Is there a cell to the left?
+                if (board[rowTracker][c].isMine()){
+                    continue; //Skip this if the cell is a mine
+                } 
 
-            if (board[c][0].isMine()){
-                continue; //Skip this if the cell is a mine
-            } 
+                int count = 0; //Set a counter to count mines surrounding
 
-            int count = 0; //Set a counter to count mines surrounding
+                if (topExists && board[rowTracker - 1][c].isMine()){
+                    //Condition if mine is on top
+                    count++;
+                }
 
-            if (topExists && board[c - columns][0].isMine()){
-                //Condition if mine is on top
-                count++;
+                if (bottomExists && board[rowTracker + 1][c].isMine()){
+                    //If mine on bottom
+                    count++;
+                }
+
+                if (rightExists && board[rowTracker][c + 1].isMine()){
+                    //If mine to the right
+                    count++;
+                }
+
+                if (leftExists && board[rowTracker][c - 1].isMine()){
+                    //If mine to the left
+                    count++;
+                }
+
+                if (topExists && leftExists && board[rowTracker - 1][c - 1].isMine()){
+                    //If mine to the top left
+                    count++;
+                }
+
+                if (topExists && rightExists && board[rowTracker - 1][c + 1].isMine()){
+                    //If mine to the top right
+                    count++;
+                }
+
+                if (bottomExists && leftExists && board[rowTracker + 1][c - 1].isMine()){
+                    //If mine to the bottom left
+                    count++;
+                }
+
+                if (bottomExists && rightExists && board[rowTracker + 1][c + 1].isMine()){
+                    //If mine to the bottom right
+                    count++;
+                }
+
+                board[rowTracker][c].cellModifier(count); //modify [row][column]
             }
-
-            if (bottomExists && board[c + columns][0].isMine()){
-                //If mine on bottom
-                count++;
-            }
-
-            if (rightExists && board[c + 1][0].isMine()){
-                //If mine to the right
-                count++;
-            }
-
-            if (leftExists && board[c - 1][0].isMine()){
-                //If mine to the left
-                count++;
-            }
-
-            if (topExists && leftExists && board[c - columns - 1][0].isMine()){
-                //If mine to the top left
-                count++;
-            }
-
-            if (topExists && rightExists && board[c - columns + 1][0].isMine()){
-                //If mine to the top right
-                count++;
-            }
-
-            if (bottomExists && leftExists && board[c + columns - 1][0].isMine()){
-                //If mine to the bottom left
-                count++;
-            }
-
-            if (bottomExists && rightExists && board[c + columns + 1][0].isMine()){
-                //If mine to the bottom right
-                count++;
-            }
-
-            board[c][0].cellModifier(count);
+            rowTracker++;
         }
-
     }
 
     /**
@@ -146,12 +150,11 @@ public class MinesweeperBoard{
         for(int i = 0; i < rows; i++){
             System.out.println(); //Prints [i]
             for (int j = 0; j < columns; j++){
-                int index = j + i * columns;
-                if (board[index][j].isMine() == true){
+                if (board[i][j].isMine() == true){
                     System.out.print("[X]"); //if there is a mine, print [X]
                 } else {
                     // System.out.print("[" + (j + i * columns) + "]");
-                    System.out.print("[" + board[index][j].cellAccessor() + "]");
+                    System.out.print("[" + board[i][j].cellAccessor() + "]");
                 }
             }
         }
@@ -159,9 +162,11 @@ public class MinesweeperBoard{
 
     public JPanel addCells(){
         JPanel panel = new JPanel(new GridLayout(rows,columns));
-        for(int i = 0; i< rows*columns; i++){
-            board[i][0]= new Cell();
-            panel.add(board[i][0].getButton());
+        for(int i = 0; i < rows; i++){
+            for (int j = 0; j < columns; j++){
+                board[i][j]= new Cell();
+                panel.add(board[i][j].getButton());
+            }
         }
         return panel;
     }
