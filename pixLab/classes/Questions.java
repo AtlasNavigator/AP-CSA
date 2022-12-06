@@ -23,5 +23,16 @@ public class Questions
      * 5. top to bottom
      * 6. left to right
      * 7. Yes, pixels can be seen
+     * 
+     * A5:
+     * 
+     * 1. No.
+     * 2. Yes.
+     * 3. No.
+     * 4. Yes.
+     * 5. Yes.
+     * 6. Yes.
+     * 7. Yes.
+     * 
      */
 }
