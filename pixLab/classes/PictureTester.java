@@ -58,12 +58,21 @@ public class PictureTester
     caterpillar.explore();
   }
   
+    /** Method to test mirrorHorizontal */
+  public static void testMirrorHorizontal()
+  {
+    Picture caterpillar = new Picture("caterpillar.jpg");
+    caterpillar.explore();
+    caterpillar.mirrorHorizontal();
+    caterpillar.explore();
+  }
+  
    /** Method to test mirrorVerticalLeftToRight */
   public static void testMirrorVerticalLeftToRight()
   {
     Picture caterpillar = new Picture("caterpillar.jpg");
     caterpillar.explore();
-    caterpillar.mirrorVertical();
+    caterpillar.mirrorVerticalRightToLeft();
     caterpillar.explore(); //Return to this Monday (12/09)
   }
   
