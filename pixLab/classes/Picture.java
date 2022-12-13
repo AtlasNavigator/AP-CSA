@@ -111,7 +111,7 @@ public class Picture extends SimplePicture
             }
         }
     }
-    
+
     /** Negate Method - 255 minus value **/
     public void negate()
     {
@@ -126,7 +126,7 @@ public class Picture extends SimplePicture
             }
         }
     }
-    
+
     /** Grayscale, average of RGB vlaues **/
     public void grayscale()
     {
@@ -139,14 +139,14 @@ public class Picture extends SimplePicture
                 average += pixelObj.getGreen();
                 average += pixelObj.getBlue();
                 average = average / 3; //Get average
-                
+
                 pixelObj.setRed(average);
                 pixelObj.setGreen(average);
                 pixelObj.setBlue(average);
             }
         }
     }
-    
+
     /** Grayscale, but specifically for water.jpg **/
     public void fixUnderwater()
     {
@@ -159,14 +159,14 @@ public class Picture extends SimplePicture
                 average += pixelObj.getGreen();
                 average += pixelObj.getBlue();
                 average = average / 3; //Get average
-                
+
                 pixelObj.setRed(average);
                 pixelObj.setGreen(average);
                 pixelObj.setBlue(pixelObj.getBlue());
             }
         }
     }
-    
+
     /** Method that mirrors the picture around a 
      * vertical mirror in the center of the picture
      * from left to right */
@@ -186,7 +186,7 @@ public class Picture extends SimplePicture
             }
         } 
     }
-    
+
     /** Method that mirrors the picture from right to left */
     public void mirrorVerticalRightToLeft()
     {
@@ -204,7 +204,7 @@ public class Picture extends SimplePicture
             }
         } 
     }
-    
+
     /** Method that mirrors the image horizontally */
     public void mirrorHorizontal()
     {
@@ -219,6 +219,24 @@ public class Picture extends SimplePicture
                 topPixel = pixels[row][col];
                 bottomPixel = pixels[height - row - 1][col];
                 bottomPixel.setColor(topPixel.getColor());
+            }
+        } 
+    }
+
+    /** Method that mirrors the image horizontally from the bottom up */
+    public void mirrorHorizontalBotToTop()
+    {
+        Pixel[][] pixels = this.getPixels2D();
+        Pixel topPixel = null;
+        Pixel bottomPixel = null;
+        int height = pixels.length;
+        for (int row = 0; row < height / 2; row++)
+        {
+            for (int col = 0; col < pixels[0].length; col++)
+            {
+                topPixel = pixels[row][col];
+                bottomPixel = pixels[height - row - 1][col];
+                topPixel.setColor(bottomPixel.getColor());
             }
         } 
     }
