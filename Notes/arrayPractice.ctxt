@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=arrayPractice
+comment0.text=\r\n\ Practicing\ arrays\r\n\r\n\ @author\ Jose\ Prieto\r\n\ @version\ 01092023\r\n
+comment1.params=
+comment1.target=void\ arrayPractice()
+comment2.params=
+comment2.target=void\ print()
+comment2.text=\r\n\ Prints\ current\ contents\ of\ array\ in\ a\ single\ line\ with\ a\ space\r\n\ between\ each\ number\r\n
+comment3.params=index
+comment3.target=void\ removeIndex(int)
+comment3.text=\r\n\ Removes\ the\ ith\ number\ form\ the\ list,\ and\ replaces\ last\ index\ with\ 0\r\n\ \r\n\ For\ example\ the\ array\:\ 2\ 7\ 3\ 1\ 4\ 10\r\n\ with\ the\ call\ removeIndex(2)\ becomes\:\ 2\ 7\ 1\ 4\ 10\ 0\r\n
+comment4.params=
+comment4.target=void\ addNum()
+comment4.text=\r\n\ Adds\ num\ to\ the\ array\ at\ specified\ index.\ To\ accomodate\ the\ change,\r\n\ the\ last\ number\ in\ the\ array\ will\ be\ lost.\r\n\ \r\n\ For\ example\:\ 2\ 7\ 3\ 1\ 4\ 10\r\n\ with\ the\ call\ AddNum(9,\ 1)\ becomes\:\ 2\ 9\ 7\ 3\ 1\ 4\r\n
+numComments=5
