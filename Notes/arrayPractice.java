@@ -52,7 +52,19 @@ public class arrayPractice
      * with the call AddNum(9, 1) becomes: 2 9 7 3 1 4
      */
 
-    public void addNum(){
-        
+    public void addNum(int num, int index){
+        for (int i = index; i < arr.length - 1; i++){
+            arr[i] = num;
+            //Incomplete, finish tomorrow (01/10/23)
+        }
+        arr[arr.length - 1] = 0;
+    }
+    
+    //Part C:
+    /**
+     * Finds and removes all entries with the specified num
+     */
+    public void removeAll(int num){
+        int[] testArr = {1, 1, 2, 2, 1, 1, 1, 1, 1, 2, 3};
     }
 }
