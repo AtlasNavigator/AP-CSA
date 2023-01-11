@@ -20,31 +20,18 @@ C:\Users\y4m3\Documents\GitHub\AP-CSA\Notes\doc
 UTF-8
 -charset
 UTF-8
-C:\Users\y4m3\Documents\GitHub\AP-CSA\Notes\Array.java
+C:\Users\y4m3\Documents\GitHub\AP-CSA\Notes\arrayPractice.java
 <---- end of javadoc command ---->
-Loading source file C:\Users\y4m3\Documents\GitHub\AP-CSA\Notes\Array.java...
-C:\Users\y4m3\Documents\GitHub\AP-CSA\Notes\Array.java:41: error: illegal start of expression
-       for(){
-           ^
-C:\Users\y4m3\Documents\GitHub\AP-CSA\Notes\Array.java:41: error: illegal start of expression
-       for(){
-            ^
-C:\Users\y4m3\Documents\GitHub\AP-CSA\Notes\Array.java:41: error: ';' expected
-       for(){
-             ^
-C:\Users\y4m3\Documents\GitHub\AP-CSA\Notes\Array.java:42: error: illegal start of expression
-        System.out.println();   
-              ^
-C:\Users\y4m3\Documents\GitHub\AP-CSA\Notes\Array.java:42: error: ')' expected
-        System.out.println();   
-               ^
-C:\Users\y4m3\Documents\GitHub\AP-CSA\Notes\Array.java:42: error: illegal start of expression
-        System.out.println();   
-                  ^
-C:\Users\y4m3\Documents\GitHub\AP-CSA\Notes\Array.java:42: error: ';' expected
-        System.out.println();   
-                          ^
-C:\Users\y4m3\Documents\GitHub\AP-CSA\Notes\Array.java:42: error: variable declaration not allowed here
-        System.out.println();   
-                   ^
-8 errors
+Loading source file C:\Users\y4m3\Documents\GitHub\AP-CSA\Notes\arrayPractice.java...
+Constructing Javadoc information...
+Standard Doclet version 1.8.0_144
+Building tree for all the packages and classes...
+Generating C:\Users\y4m3\Documents\GitHub\AP-CSA\Notes\doc\arrayPractice.html...
+Generating C:\Users\y4m3\Documents\GitHub\AP-CSA\Notes\doc\package-frame.html...
+Generating C:\Users\y4m3\Documents\GitHub\AP-CSA\Notes\doc\package-summary.html...
+Generating C:\Users\y4m3\Documents\GitHub\AP-CSA\Notes\doc\constant-values.html...
+Building index for all the packages and classes...
+Building index for all classes...
+Generating C:\Users\y4m3\Documents\GitHub\AP-CSA\Notes\doc\allclasses-frame.html...
+Generating C:\Users\y4m3\Documents\GitHub\AP-CSA\Notes\doc\allclasses-noframe.html...
+Generating C:\Users\y4m3\Documents\GitHub\AP-CSA\Notes\doc\index.html...

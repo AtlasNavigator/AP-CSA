@@ -53,11 +53,13 @@ public class arrayPractice
      */
 
     public void addNum(int num, int index){
-        for (int i = index; i < arr.length - 1; i++){
-            arr[i] = num;
+        int[] arr2 = new int[arr.length - 1];
+        
+        for (int i = index + 1; i < arr2.length - 1; i++){
+            arr2[i] = arr[i + 1];
             //Incomplete, finish tomorrow (01/10/23)
         }
-        arr[arr.length - 1] = 0;
+        
     }
     
     //Part C:
