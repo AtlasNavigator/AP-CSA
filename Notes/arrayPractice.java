@@ -56,12 +56,15 @@ public class arrayPractice
         int[] arr2 = new int[arr.length];
         
          for(int i=0, k=0; i < arr.length; i++){
-            if(i!=index){
-                arr2[k]=arr[i];
-                k++;
+            if(i < index){
+                arr2[i] = arr[i];
+            } else if (i == index){
+                arr2[i] = num;
+            } else {
+                arr2[i] = arr[i-1];
             }
         }
-        arr = arr2; //Not working properly yet 01/12
+        arr = arr2;
     }
     
     //Part C:
