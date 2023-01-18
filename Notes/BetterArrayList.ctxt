@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=BetterArrayList
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ betterArrayList\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=BetterArrayList()
+comment2.params=
+comment2.target=void\ addStuff()
+comment3.params=
+comment3.target=void\ printFirstLetter()
+comment4.params=name
+comment4.target=void\ addItem(java.lang.String)
+comment5.params=
+comment5.target=java.lang.String\ changeFirstItem()
+numComments=6
