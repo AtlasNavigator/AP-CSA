@@ -26,4 +26,8 @@ public class ArrayListsPractice
             System.out.println("Here is something");
         }
     }
+    
+    public Object remove (int index){
+        return list.remove(index);
+    }
 }

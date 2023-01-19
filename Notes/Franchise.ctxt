@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=Franchise
+comment0.text=\r\n\ McDonal\r\n\r\n\ @author\ Jose\ Prieto\r\n\ @version\ 01192023\r\n
+comment1.params=
+comment1.target=Franchise()
+comment2.params=
+comment2.target=int\ getCost()
+comment3.params=
+comment3.target=int\ numberOfCustomers()
+comment4.params=
+comment4.target=double\ getRevenue()
+comment5.params=
+comment5.target=boolean\ isProfitable()
+numComments=6

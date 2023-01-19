@@ -19,7 +19,7 @@ public class BetterArrayList
     
     public void addStuff(){
         shoppingList.add("eggs");
-        shoppingList.add("oranges");
+        shoppingList.add("oranges"); //Add items to arrayList in the end
     } 
     
     public void printFirstLetter(){
@@ -37,5 +37,18 @@ public class BetterArrayList
         // return itemChanged;
         
         return shoppingList.set(0, "EGGS"); //Better way to do it
+    }
+    
+    public void removeItems(int index){
+        String itemRemoved = shoppingList.remove(index); //Remove an index from the arrayList
+    }
+    
+    public void addFirstItem(String name){
+        // boolean a = shoppingList.add(0, name); //This won't work
+        shoppingList.add(0, name); //Adds item to first slot
+    }
+    
+    public String getIndexOne(){
+        return shoppingList.get(1);
     }
 }
