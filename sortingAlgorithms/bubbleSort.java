@@ -10,7 +10,7 @@ public class bubbleSort
 {
     public static int[] bubblesort() {
         int[] numbers;
-        numbers = new int[1000000];
+        numbers = new int[10000];
         for (int i = 0; i < numbers.length; i++){
             int randomNum = (int)(Math.random() * 2147483646);
             numbers[i] = randomNum;
