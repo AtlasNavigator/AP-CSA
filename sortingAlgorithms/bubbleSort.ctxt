@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=bubbleSort
-comment0.text=\r\n\ A\ Java\ Implementation\ of\ the\ Bubble\ Sort\ algorithm.\r\n\ Made\ by\ a\ crazy\ person\ who\ is\ not\ sure\ they\ know\ what\ they're\ doing.\r\n\r\n\ @author\ Jose\ Prieto\r\n\ @version\ 02022023\r\n
+comment0.text=\r\n\ A\ Java\ Implementation\ of\ the\ Bubble\ Sort\ algorithm.\r\n\ Made\ by\ a\ crazy\ person\ who\ is\ not\ (fully)\ sure\ they\ know\ what\ they're\ doing.\r\n\r\n\ @author\ Jose\ Prieto\r\n\ @version\ 02022023\r\n
 comment1.params=
 comment1.target=int[]\ bubblesort()
 numComments=2
