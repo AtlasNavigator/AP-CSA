@@ -1,33 +1,50 @@
-
+import java.util.*;
 /**
- * Write a description of class insertionSort here.
+ * Hopefully performs an insertion sort
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Jose Prieto
+ * @version 02072023
  */
 public class insertionSort
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class insertionSort
-     */
-    public insertionSort()
-    {
-        // initialise instance variables
-        x = 0;
+    public void insertionSort(){
+        int[] arr;
+        arr = new int[10000];
+        for (int i = 0; i < arr.length; i++){
+            int randomNum = (int)(Math.random() * 2147483646);
+            arr[i] = randomNum;
+            // System.out.println("1st: Index " + 0 + " is " + numbers[0]);
+        }
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public static void main()
+    {   
+        insertionSort arrayOfNumbers = new insertionSort();
+        arrayOfNumbers.arraySort(arr);
     }
+
+    void arraySort(int arr[])
+    {
+        int n = arr.length;
+        for (int i = 1; i < n; i++) {
+            int selected = arr[i];
+            int j = i - 1;
+
+            while (j >= 0 && arr[j] > selected) {
+                arr[j + 1] = arr[j];
+                j = j - 1;
+            }
+            arr[j + 1] = selected;
+        }
+    }
+
+    static void printArray(int arr[])
+    {
+        int n = arr.length;
+        for (int i = 0; i < n; i++)
+            System.out.print(arr[i] + " ");
+
+        System.out.println();
+    }
+
 }
