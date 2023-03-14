@@ -1,8 +1,8 @@
 #BlueJ class context
-comment0.target=arrayPractice
+comment0.target=modArrays
 comment0.text=\r\n\ Practicing\ arrays\r\n\r\n\ @author\ Jose\ Prieto\r\n\ @version\ 01092023\r\n
 comment1.params=
-comment1.target=arrayPractice()
+comment1.target=modArrays()
 comment2.params=
 comment2.target=void\ print()
 comment2.text=\r\n\ Prints\ current\ contents\ of\ array\ in\ a\ single\ line\ with\ a\ space\r\n\ between\ each\ number\r\n

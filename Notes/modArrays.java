@@ -5,14 +5,14 @@ import java.lang.Math;
  * @author Jose Prieto
  * @version 01092023
  */
-public class arrayPractice
+public class modArrays
 {
     /** Generate an array with 6 randomly generated integers/
      * (Have the numbers created in a constructor)
      */
     int[] arr;
 
-    public arrayPractice(){
+    public modArrays(){
         arr = new int[6]; //Create array with 6 slots
         for (int i = 0; i < arr.length; i++){
             arr[i] = (int)(Math.random()*10 + 1); //Fill the array with random nums
